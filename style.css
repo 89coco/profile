@@ -1,0 +1,230 @@
+
+h1 {
+  color: grey;
+  font-size: 12;
+  font-weight: lighter;
+  font-stretch: expanded;
+  font-family: Helvetica;
+ }
+
+.empty{
+   color: none
+ }
+
+h2 {
+ color: grey;
+ font-size: 10;
+ font-weight: lighter;
+ font-stretch: expanded;
+ font-family: Helvetica;
+}
+
+p {
+  color: black;
+  font-size: 10;
+  font-weight: light;
+  font-family: Helvetica;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.container_1 {
+  background-color: whitesmoke;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card_1 {
+  padding: 30px;
+  border-radius: 4px;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+header {
+  padding-top: 2px;
+  background-color: rgb(144, 147, 150);
+  border-color: #f7de4f;
+  border-style: solid;
+  border-top: thick;
+}
+
+.navigation {
+  border: none;
+  padding: 2px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-left-style: solid;
+  border-left-width: 0.5px;
+  border-color: whitesmoke;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #f7de4f;
+ }
+
+footer {
+  background-color: #909396;
+  padding: 5px
+}
+
+.icon {
+  font-size: 8;
+  margin: 2px;
+}
+
+.container {
+  --s: 25vmin;
+  --p: calc(var(--s) / 2);
+  --c1: pink;
+  --c2: #f7de4f;
+  /* dodgerblue; */
+  --c3: white;
+  --bg: var(--c3);
+  --d: 4000ms;
+  --e: cubic-bezier(0.76, 0, 0.24, 1);
+
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(45deg, var(--c1) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--c2) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
+  background-size: var(--s) var(--s);
+  background-position:
+    calc(var(--p) *  1) calc(var(--p) *  0),
+    calc(var(--p) * -1) calc(var(--p) *  1),
+    calc(var(--p) *  1) calc(var(--p) * -1),
+    calc(var(--p) * -1) calc(var(--p) *  0);
+  animation:
+    color var(--d) var(--e) infinite,
+    position var(--d) var(--e) infinite;
+}
+
+@keyframes color {
+  0%, 25% {
+    --bg: var(--c3);
+  }
+  26%, 50% {
+    --bg: var(--c1);
+  }
+  51%, 75% {
+    --bg: var(--c3);
+  }
+  76%, 100% {
+    --bg: var(--c2);
+  }
+}
+
+@keyframes position {
+  0% {
+    background-position:
+      calc(var(--p) *  1) calc(var(--p) *  0),
+      calc(var(--p) * -1) calc(var(--p) *  1),
+      calc(var(--p) *  1) calc(var(--p) * -1),
+      calc(var(--p) * -1) calc(var(--p) *  0);
+  }
+  25% {
+    background-position:
+      calc(var(--p) *  1) calc(var(--p) *  4),
+      calc(var(--p) * -1) calc(var(--p) *  5),
+      calc(var(--p) *  1) calc(var(--p) *  3),
+      calc(var(--p) * -1) calc(var(--p) *  4);
+  }
+  50% {
+    background-position:
+      calc(var(--p) *  3) calc(var(--p) * 8),
+      calc(var(--p) * -3) calc(var(--p) * 9),
+      calc(var(--p) *  2) calc(var(--p) * 7),
+      calc(var(--p) * -2) calc(var(--p) * 8);
+  }
+  75% {
+    background-position:
+      calc(var(--p) *  3) calc(var(--p) * 12),
+      calc(var(--p) * -3) calc(var(--p) * 13),
+      calc(var(--p) *  2) calc(var(--p) * 11),
+      calc(var(--p) * -2) calc(var(--p) * 12);
+  }
+  100% {
+    background-position:
+      calc(var(--p) *  5) calc(var(--p) * 16),
+      calc(var(--p) * -5) calc(var(--p) * 17),
+      calc(var(--p) *  5) calc(var(--p) * 15),
+      calc(var(--p) * -5) calc(var(--p) * 16);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  body {
+    animation: none;
+  }
+}
+
+.carolin {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px #f7de4f;
+}
+
+li {
+  list-style-type: none;
+  color: white;
+  display: inline-flex
+}
+
+.card_2 {
+  background-color: rgba(245, 245, 245, 0.9);
+  width: 600px;
+  margin: 10px;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.card {
+  background-color: rgba(247, 222, 79, 0.9);
+  width: 600px;
+  margin: 10px;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.container {
+  margin: 10;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container_1 {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container_1 {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container_1 {
+    width: 300px;
+  }
+}
